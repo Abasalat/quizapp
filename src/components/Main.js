@@ -15,21 +15,21 @@ const Main = () => {
       </div>
       </div>
       <div className='box b2'>
-        <h3>Genaral Knowlege</h3>
+        <h3>Sports</h3>
         <div className='start s2'>
-        <Link className='btn' to={'quiz'}>Start Quiz</Link>
+        <Link className='btn' to={'quiz2'}>Start Quiz</Link>
       </div>
       </div>
       <div className='box b3'>
-        <h3>Genaral Knowlege</h3>
+        <h3>Science</h3>
         <div className='start s3'>
-        <Link className='btn' to={'quiz'}>Start Quiz</Link>
+        <Link className='btn' to={'quiz3'}>Start Quiz</Link>
       </div>
       </div>
       <div className='box b4'>
-        <h3>Genaral Knowlege</h3>
+        <h3>Programming</h3>
         <div className='start s4'>
-        <Link className='btn' to={'quiz'}>Start Quiz</Link>
+        <Link className='btn' to={'quiz4'}>Start Quiz</Link>
       </div>
       </div>
       

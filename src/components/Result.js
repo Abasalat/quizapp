@@ -42,7 +42,7 @@ const Result = () => {
       </div>
 
       <div className="container">
-      /**/
+      {/*This is the result table*/}
       <ResultTable/>
       </div>
     </div>
