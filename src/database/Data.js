@@ -6,7 +6,6 @@ function shuffleArray(array) {
   }
   return array;
 }
-
 // Array of questions with added randomization
 const gkQuestions = shuffleArray([
   {
@@ -16,7 +15,7 @@ const gkQuestions = shuffleArray([
       'Object-Oriented',
       'Object-Based',
       'Procedural',
-      'Language'
+      'Language*'
     ]
   },
   {
@@ -25,7 +24,7 @@ const gkQuestions = shuffleArray([
     options: [
       'Berlin',
       'Madrid',
-      'Paris',
+      'Paris*',
       'Rome'
     ]
   },
@@ -35,7 +34,7 @@ const gkQuestions = shuffleArray([
     options: [
       'Charles Dickens',
       'Jane Austen',
-      'William Shakespeare',
+      'William Shakespeare*',
       'Mark Twain'
     ]
   },
@@ -44,7 +43,7 @@ const gkQuestions = shuffleArray([
     question: "In which year did World War II end?",
     options: [
       '1943',
-      '1945',
+      '1945*',
       '1950',
       '1939'
     ]
@@ -54,7 +53,7 @@ const gkQuestions = shuffleArray([
     question: "What is the largest planet in our solar system?",
     options: [
       'Earth',
-      'Jupiter',
+      'Jupiter*',
       'Saturn',
       'Mars'
     ]
@@ -64,7 +63,7 @@ const gkQuestions = shuffleArray([
     question: "Who painted the Mona Lisa?",
     options: [
       'Vincent van Gogh',
-      'Leonardo da Vinci',
+      'Leonardo da Vinci*',
       'Pablo Picasso',
       'Michelangelo'
     ]
@@ -73,7 +72,7 @@ const gkQuestions = shuffleArray([
     id: 7,
     question: "What is the currency of Japan?",
     options: [
-      'Yen',
+      'Yen*',
       'Won',
       'Dollar',
       'Euro'
@@ -84,7 +83,7 @@ const gkQuestions = shuffleArray([
     question: "Which planet is known as the Red Planet?",
     options: [
       'Venus',
-      'Mars',
+      'Mars*',
       'Jupiter',
       'Mercury'
     ]
@@ -94,7 +93,7 @@ const gkQuestions = shuffleArray([
     question: "Who was the first President of the United States?",
     options: [
       'Thomas Jefferson',
-      'George Washington',
+      'George Washington*',
       'Abraham Lincoln',
       'John Adams'
     ]
@@ -106,14 +105,14 @@ const gkQuestions = shuffleArray([
       'Atlantic Ocean',
       'Indian Ocean',
       'Southern Ocean',
-      'Pacific Ocean'
+      'Pacific Ocean*'
     ]
   },
   {
     id: 11,
     question: "Which element has the chemical symbol 'O'?",
     options: [
-      'Oxygen',
+      'Oxygen*',
       'Gold',
       'Silver',
       'Carbon'
@@ -124,7 +123,7 @@ const gkQuestions = shuffleArray([
     question: "Who developed the theory of relativity?",
     options: [
       'Isaac Newton',
-      'Albert Einstein',
+      'Albert Einstein*',
       'Galileo Galilei',
       'Stephen Hawking'
     ]
@@ -133,7 +132,7 @@ const gkQuestions = shuffleArray([
     id: 13,
     question: "What is the longest river in the world?",
     options: [
-      'Nile',
+      'Nile*',
       'Amazon',
       'Mississippi',
       'Yangtze'
@@ -145,7 +144,7 @@ const gkQuestions = shuffleArray([
     options: [
       'China',
       'South Korea',
-      'Japan',
+      'Japan*',
       'Vietnam'
     ]
   },
@@ -154,7 +153,7 @@ const gkQuestions = shuffleArray([
     question: "Who wrote 'To Kill a Mockingbird'?",
     options: [
       'J.K. Rowling',
-      'Harper Lee',
+      'Harper Lee*',
       'George Orwell',
       'Mark Twain'
     ]
@@ -164,7 +163,7 @@ const gkQuestions = shuffleArray([
     question: "What is the largest mammal in the world?",
     options: [
       'Elephant',
-      'Blue Whale',
+      'Blue Whale*',
       'Giraffe',
       'Hippopotamus'
     ]
@@ -173,7 +172,7 @@ const gkQuestions = shuffleArray([
     id: 17,
     question: "In which year did the Titanic sink?",
     options: [
-      '1912',
+      '1912*',
       '1920',
       '1901',
       '1931'
@@ -184,7 +183,7 @@ const gkQuestions = shuffleArray([
     question: "Who is known as the 'Father of Computer Science'?",
     options: [
       'Bill Gates',
-      'Alan Turing',
+      'Alan Turing*',
       'Steve Jobs',
       'Charles Babbage'
     ]
@@ -193,7 +192,7 @@ const gkQuestions = shuffleArray([
     id: 19,
     question: "Which gas is most abundant in the Earth's atmosphere?",
     options: [
-      'Nitrogen',
+      'Nitrogen*',
       'Oxygen',
       'Carbon Dioxide',
       'Argon'
@@ -204,7 +203,7 @@ const gkQuestions = shuffleArray([
     question: "Who discovered penicillin?",
     options: [
       'Marie Curie',
-      'Alexander Fleming',
+      'Alexander Fleming*',
       'Louis Pasteur',
       'Robert Koch'
     ]
@@ -215,7 +214,7 @@ const gkQuestions = shuffleArray([
     options: [
       '0',
       '1',
-      '2',
+      '2*',
       '3'
     ]
   },
@@ -223,7 +222,7 @@ const gkQuestions = shuffleArray([
     id: 22,
     question: "Which planet is known as the 'Morning Star'?",
     options: [
-      'Venus',
+      'Venus*',
       'Mercury',
       'Mars',
       'Jupiter'
@@ -234,7 +233,7 @@ const gkQuestions = shuffleArray([
     question: "Who painted the Sistine Chapel ceiling?",
     options: [
       'Leonardo da Vinci',
-      'Michelangelo',
+      'Michelangelo*',
       'Raphael',
       'Donatello'
     ]
@@ -243,7 +242,7 @@ const gkQuestions = shuffleArray([
     id: 24,
     question: "What is the largest desert in the world?",
     options: [
-      'Sahara Desert',
+      'Sahara Desert*',
       'Arctic Desert',
       'Gobi Desert',
       'Antarctica'
@@ -253,12 +252,17 @@ const gkQuestions = shuffleArray([
     id: 25,
     question: "Which animal is known as the 'King of the Jungle'?",
     options: [
-      'Lion',
+      'Lion*',
       'Tiger',
       'Leopard',
       'Cheetah'
     ]
   }
 ]);
+
 const randomQuestions5 = gkQuestions.slice(0, 5);
-export default randomQuestions5;
+const answers = randomQuestions5.map(question => {
+  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
+});
+
+export { randomQuestions5, answers };

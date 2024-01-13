@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import randomQuestions5 from '../database/Data'
+import {randomQuestions5, answers} from '../database/Data'
 import { useDispatch } from "react-redux";
 
 //** redux actions */
@@ -27,7 +27,7 @@ export const useFetchQuestion = ()=>{
                     setGetData(prev => ({...prev, apiData: question}));
 
                     //** dispatch an action */
-                    dispatch(Action.startExamAction(question))
+                    dispatch(Action.startExamAction({question, answers}))
                 }else{
                     throw new Error("No Question Available")
                 }
