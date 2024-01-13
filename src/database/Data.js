@@ -261,8 +261,17 @@ const gkQuestions = shuffleArray([
 ]);
 
 const randomQuestions5 = gkQuestions.slice(0, 5);
-const answers = randomQuestions5.map(question => {
-  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
+
+const questionsForUI = randomQuestions5.map(question => {
+  const optionsWithoutAsterisk = question.options.map(option => option.replace(/\*$/, ''));
+  return {
+    id: question.id,
+    question: question.question,
+    options: optionsWithoutAsterisk
+  };
 });
 
-export { randomQuestions5, answers };
+const answer = randomQuestions5.map(question => {
+  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
+});
+export { questionsForUI, answer};

@@ -15,7 +15,7 @@ const sportsQuestions = shuffleArray([
       'Brazil',
       'Germany',
       'France',
-      'Spain'
+      'Spain*'
     ]
   },
   {
@@ -25,7 +25,7 @@ const sportsQuestions = shuffleArray([
       'Roger Federer',
       'Rafael Nadal',
       'Novak Djokovic',
-      'Serena Williams'
+      'Serena Williams*'
     ]
   },
   {
@@ -34,7 +34,7 @@ const sportsQuestions = shuffleArray([
     options: [
       '2008',
       '2012',
-      '2016',
+      '2016*',
       '2020'
     ]
   },
@@ -43,7 +43,7 @@ const sportsQuestions = shuffleArray([
     question: "Which sport is known as the 'Gentleman's Game'?",
     options: [
       'Soccer',
-      'Cricket',
+      'Cricket*',
       'Golf',
       'Tennis'
     ]
@@ -54,7 +54,7 @@ const sportsQuestions = shuffleArray([
     options: [
       'Los Angeles Lakers',
       'Golden State Warriors',
-      'Milwaukee Bucks',
+      'Milwaukee Bucks*',
       'Toronto Raptors'
     ]
   },
@@ -64,7 +64,7 @@ const sportsQuestions = shuffleArray([
     options: [
       'Geneva',
       'Paris',
-      'Lausanne',
+      'Lausanne*',
       'Brussels'
     ]
   },
@@ -74,7 +74,7 @@ const sportsQuestions = shuffleArray([
     options: [
       'Arnold Palmer',
       'Tiger Woods',
-      'Jack Nicklaus',
+      'Jack Nicklaus*',
       'Phil Mickelson'
     ]
   },
@@ -85,7 +85,7 @@ const sportsQuestions = shuffleArray([
       'Points',
       'Scores',
       'Ranks',
-      'Love'
+      'Love*'
     ]
   },
   {
@@ -93,7 +93,7 @@ const sportsQuestions = shuffleArray([
     question: "Which country hosted the 2016 Summer Olympics?",
     options: [
       'China',
-      'Brazil',
+      'Brazil*',
       'United States',
       'Russia'
     ]
@@ -105,14 +105,14 @@ const sportsQuestions = shuffleArray([
       'Pele',
       'Lionel Messi',
       'Cristiano Ronaldo',
-      'Gerd Muller'
+      'Gerd Muller*'
     ]
   },
   {
     id: 11,
     question: "Which athlete is known as 'Lightning Bolt'?",
     options: [
-      'Usain Bolt',
+      'Usain Bolt*',
       'Carl Lewis',
       'Michael Johnson',
       'Jesse Owens'
@@ -122,7 +122,7 @@ const sportsQuestions = shuffleArray([
     id: 12,
     question: "In which sport would you perform a slam dunk?",
     options: [
-      'Basketball',
+      'Basketball*',
       'Tennis',
       'Volleyball',
       'Badminton'
@@ -134,7 +134,7 @@ const sportsQuestions = shuffleArray([
     options: [
       'Kobe Bryant',
       'LeBron James',
-      'Kareem Abdul-Jabbar',
+      'Kareem Abdul-Jabbar*',
       'Michael Jordan'
     ]
   },
@@ -143,7 +143,7 @@ const sportsQuestions = shuffleArray([
     question: "Which Formula 1 team does Lewis Hamilton drive for?",
     options: [
       'Ferrari',
-      'Mercedes',
+      'Mercedes*',
       'Red Bull Racing',
       'McLaren'
     ]
@@ -154,7 +154,7 @@ const sportsQuestions = shuffleArray([
     options: [
       '16',
       '18',
-      '20',
+      '20*',
       '22'
     ]
   },
@@ -162,7 +162,7 @@ const sportsQuestions = shuffleArray([
     id: 16,
     question: "Which country has won the most Olympic gold medals?",
     options: [
-      'United States',
+      'United States*',
       'China',
       'Russia',
       'Germany'
@@ -172,7 +172,7 @@ const sportsQuestions = shuffleArray([
     id: 17,
     question: "Who is the captain of the Indian cricket team (as of 2022)?",
     options: [
-      'Virat Kohli',
+      'Virat Kohli*',
       'Rohit Sharma',
       'KL Rahul',
       'Ajinkya Rahane'
@@ -184,7 +184,7 @@ const sportsQuestions = shuffleArray([
     options: [
       'Flawless',
       'Superb',
-      'Perfect',
+      'Perfect*',
       'Excellence'
     ]
   },
@@ -194,7 +194,7 @@ const sportsQuestions = shuffleArray([
     options: [
       'Sydney',
       'Beijing',
-      'London',
+      'London*',
       'Rio de Janeiro'
     ]
   },
@@ -202,7 +202,7 @@ const sportsQuestions = shuffleArray([
     id: 20,
     question: "In which year did the first modern Olympic Games take place?",
     options: [
-      '1896',
+      '1896*',
       '1900',
       '1920',
       '1936'
@@ -212,7 +212,7 @@ const sportsQuestions = shuffleArray([
     id: 21,
     question: "Who won the 2021 Wimbledon Men's Singles title?",
     options: [
-      'Novak Djokovic',
+      'Novak Djokovic*',
       'Roger Federer',
       'Rafael Nadal',
       'Andy Murray'
@@ -223,7 +223,7 @@ const sportsQuestions = shuffleArray([
     question: "Which country is known as the 'Land of the Long White Cloud' in rugby?",
     options: [
       'Australia',
-      'New Zealand',
+      'New Zealand*',
       'South Africa',
       'England'
     ]
@@ -234,7 +234,7 @@ const sportsQuestions = shuffleArray([
     options: [
       '26.2',
       '21.1',
-      '42.2',
+      '42.2*',
       '35.0'
     ]
   },
@@ -242,7 +242,7 @@ const sportsQuestions = shuffleArray([
     id: 24,
     question: "Who is the most decorated Olympian of all time?",
     options: [
-      'Michael Phelps',
+      'Michael Phelps*',
       'Usain Bolt',
       'Simone Biles',
       'Nadia Comaneci'
@@ -254,11 +254,25 @@ const sportsQuestions = shuffleArray([
     options: [
       'India',
       'Australia',
-      'England',
+      'England*',
       'South Africa'
     ]
   }
 ]);
-
 const randomQuestions5 = sportsQuestions.slice(0, 5);
-export default randomQuestions5;
+
+const questionsForSports = randomQuestions5.map(question => {
+  const optionsWithoutAsterisk = question.options.map(option => option.replace(/\*$/, ''));
+  return {
+    id: question.id,
+    question: question.question,
+    options: optionsWithoutAsterisk
+  };
+});
+
+const spanswer = randomQuestions5.map(question => {
+  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
+});
+
+export { questionsForSports, spanswer};
+
