@@ -1,6 +1,10 @@
 import React, { useRef } from "react";
 import { Link, useLocation, Route, Routes } from "react-router-dom";
 import "../style/Main.css";
+// import Quiz from "./Quiz";
+// import Quiz2 from "./Quiz2";
+// import Quiz3 from "./Quiz3";
+// import Quiz4 from "./Quiz4";
 
 import Quiz from "./Quizes";
 
@@ -9,7 +13,7 @@ const Main = () => {
 
   const location = useLocation();
   return (
-    <div className="container">
+    <div className="container-main">
       <h3 style={{ color: "white" }}>
         Welcome {location.state && location.state.id}
       </h3>
@@ -34,7 +38,7 @@ const Main = () => {
         <div className="box b3">
           <h3>Science</h3>
           <div className="start s3">
-            <Link className="btn" to={"quiz3"}>
+            <Link className="btn" to={"/quiz3"}>
               Start Quiz
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Question2 from "./Question2";
-import { MoveNextQuestion, MovePrevQuestion } from "../hooks/FetchQuestions1";
+import { MoveNextQuestion, MovePrevQuestion } from "../hooks/FetchQuestions";
 import { PushAnswer } from "../hooks/setResult";
 /* redux store import */
 import { useSelector, useDispatch } from "react-redux";
@@ -11,7 +11,6 @@ const Quiz2 = () => {
   const result = useSelector((state) => state.result.result);
   const { queue, trace } = useSelector((state) => state.questions);
   const dispatch = useDispatch();
-
 
   /** next biutton event handler */
   function onNext() {
@@ -26,7 +25,7 @@ const Quiz2 = () => {
     }
 
     //** reset the value of the checked */
-    setChecked(undefined)
+    setChecked(undefined);
   }
   function onPrev() {
     if (trace > 0) {
@@ -45,14 +44,20 @@ const Quiz2 = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container-main">
       <h1 className="title text-light">Quiz Application</h1>
 
       {/*display questoin*/}
       <Question2 onChecked={onChecked} />
 
       <div className="grid">
-        { trace > 0 ? <button className="btn prev" onClick={onPrev}>Prev</button>: <div></div>}
+        {trace > 0 ? (
+          <button className="btn prev" onClick={onPrev}>
+            Prev
+          </button>
+        ) : (
+          <div></div>
+        )}
         <button className="btn next" onClick={onNext}>
           Next
         </button>

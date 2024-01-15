@@ -9,12 +9,17 @@ import { Quiz3 } from "./Quiz3";
 import { Quiz4 } from "./Quiz4";
 import Result from "./Result";
 import Data from "../database/Data";
+import LandingPage from "./LandingPage";
 import LoginForm from "../components/LoginForm";
 import Signup from "../components/Signup";
 
 //**react routes */
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage></LandingPage>,
+  },
   {
     path: "/main",
     element: <Main></Main>,

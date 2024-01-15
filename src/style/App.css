@@ -4,25 +4,39 @@
   --light-color: #f0f0f0;
 }
 
-html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+/* Scroll Bar Customization */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00c774;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: rgb(188, 185, 185);
 }
 
 body {
   height: 100%;
-  background: url(../assets/img/bg-pic.webp) no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: var(--dark-color) !important;
 }
 
 * > * {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.container-main {
   display: block;
   position: relative;
   margin: 40px auto;
@@ -31,7 +45,7 @@ body {
   padding: 20px;
 }
 
-.container .title {
+.container-main .title {
   font-size: 3em;
   text-align: center;
   border: 5px solid var(--primary-color);
@@ -47,51 +61,44 @@ body {
   margin-top: 2rem !important;
 }
 
-.container ul {
+.container-main ul {
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: auto;
 }
 
-.container .questions {
+.container-main .questions {
   padding: 3em;
 }
 
-/* 
-.container .questions .qid{
-  padding: .2em .7em;
-  color: #222222;
-  background-color: #0DFF92;
-  border-radius: 50px;
-} */
-
-.container .grid {
+.container-main .grid {
   margin-top: 3em;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.container .btn {
+.container-main .btn {
   padding: 0.2em 1.7em;
   border: none;
+  background-color: #00ff95;
   border-radius: 0.1em;
   font-size: 1.2em;
 }
 
-.container .btn:hover {
+.container-main .btn:hover {
   cursor: pointer;
-  background-color: #f0f0f0;
+  background-color: #00c774;
   color: #202020;
 }
 
 .next {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
   justify-self: flex-end;
 }
 
 .prev {
-  background-color: #faff5a;
+  background-color: #faff5a !important;
   justify-self: flex-start;
 }
 
@@ -128,6 +135,7 @@ ul li:hover label {
 }
 
 ul li .check {
+  box-sizing: content-box;
   display: block;
   position: absolute;
   border: 5px solid #aaaaaa;
@@ -179,16 +187,24 @@ input[type="radio"]:checked ~ .text-primary {
 .checked::before {
   background: var(--primary-color);
 }
+.login,
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
 .wrapper {
-  width: 300px;
+  width: 350px;
   background-color: transparent;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  border: 1px solid var(--primary-color);
   backdrop-filter: blur(15px);
   color: white;
   padding: 20px 30px;
-  box-shadow: 8px 8px 20px rgba(220, 218, 218, 0.145);
+  box-shadow: 8px 8px 20px #31483f;
 }
 
 .wrapper h1 {
@@ -197,7 +213,6 @@ input[type="radio"]:checked ~ .text-primary {
 }
 
 .wrapper .input-box input {
-  accent-color: #fff;
   width: 100%;
   margin-top: 1rem;
   font-size: 15px;
@@ -222,8 +237,12 @@ input[type="radio"]:checked ~ .text-primary {
   /* padding: 3px 4px; */
 }
 
+.wrapper .remember-forget input {
+  accent-color: var(--primary-color);
+}
+
 .wrapper .remember-forget label input {
-  accent-color: #fff !important;
+  accent-color: #fff;
   margin: 3px;
 
   /* caret-color: white; */
@@ -265,7 +284,6 @@ textarea {
 }
 
 .wrapper .Login-btn {
-  /* width: 100%; */
   cursor: pointer;
   width: 100%;
   font-weight: 600;
@@ -281,4 +299,49 @@ textarea {
 
 .wrapper .Login-btn:hover {
   background-color: rgb(220, 217, 217);
+}
+.landing-wrapper {
+  margin-top: 5rem;
+  color: white;
+  background-color: #222222;
+  /* height: 100vh !important; */
+}
+.landing-wrapper h1 {
+  /* font-size: 30px; */
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.landing-wrapper h2 {
+  /* font-size: 30px */
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.get-started {
+  background-color: #00c774 !important;
+  /* color: black !important; */
+  border: transparent !important;
+  outline: none !important;
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.get-started:hover {
+  transform: scale(1.05);
+}
+
+.mobile-btn {
+  visibility: hidden !important;
+}
+
+.pc-btn {
+  visibility: visible;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-btn {
+    visibility: visible !important;
+  }
+  .pc-btn {
+    visibility: hidden !important;
+  }
 }

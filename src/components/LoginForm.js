@@ -34,43 +34,52 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="wrapper">
-      <form action="POST">
-        <h1>Login</h1>
-        <div className="input-box">
+    <div className="login">
+      <div className="wrapper">
+        <form action="POST">
+          <h1>Login</h1>
+          <div className="input-box">
+            <input
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              type="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div className="input-box">
+            <input
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              type="password"
+              placeholder="Password"
+              required
+            />
+          </div>
           <input
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            type="email"
-            placeholder="Email"
-            required
+            onClick={submit}
+            type="submit"
+            style={{ backgroundColor: "#00ff95" }}
+            className="Login-btn"
           />
-        </div>
-        <div className="input-box">
-          <input
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            type="password"
-            placeholder="Password"
-            required
-          />
-        </div>
-        <input onClick={submit} type="submit" className="Login-btn" />
 
-        <div className="remember-forget">
-          <input type="checkbox" style={{ width: "10px" }} />
-          <label style={{ marginRight: "5rem" }}>Remember me</label>
+          <div className="remember-forget">
+            <input type="checkbox" style={{ width: "10px" }} />
+            <label style={{ marginRight: "4.5rem" }}>Remember me</label>
 
-          <a href="/">Forgot Password?</a>
-        </div>
-        <div className="register-link">
-          Don't have an account?
-          <br />
-          <Link to="/signup">Register now</Link>
-        </div>
-      </form>
+            <a href="/">Forgot Password?</a>
+          </div>
+          <div className="register-link">
+            Don't have an account?
+            <br />
+            <Link style={{ color: "#9cf7d1" }} to="/signup">
+              Register now
+            </Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

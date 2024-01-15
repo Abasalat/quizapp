@@ -63,16 +63,4 @@ const programmingQuestions = shuffleArray([
 ]);
 
 const randomQuestions5 = programmingQuestions.slice(0, 5);
-const questionsForArt = randomQuestions5.map(question => {
-  const optionsWithoutAsterisk = question.options.map(option => option.replace(/\*$/, ''));
-  return {
-    id: question.id,
-    question: question.question,
-    options: optionsWithoutAsterisk
-  };
-});
-
-const artanswer = randomQuestions5.map(question => {
-  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
-});
-export { questionsForArt, artanswer};
+export default randomQuestions5;
