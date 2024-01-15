@@ -260,4 +260,18 @@ const scienceQuestions = shuffleArray([
   }
 ]);
 const randomQuestions5 = scienceQuestions.slice(0, 5);
-export default randomQuestions5;
+const questionsForScience = randomQuestions5.map(question => {
+  const optionsWithoutAsterisk = question.options.map(option => option.replace(/\*$/, ''));
+  return {
+    id: question.id,
+    question: question.question,
+    options: optionsWithoutAsterisk
+  };
+});
+
+const scanswer = randomQuestions5.map(question => {
+  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
+});
+
+export { questionsForScience, scanswer};
+
