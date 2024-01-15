@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { questionsForArt, artanswer} from '../database/Data3'
+import { questionsForProgramming, programmingAnswer } from '../database/Data3'
 import { useDispatch } from "react-redux";
 
 //** redux actions */
 import * as Action from '../redux/question_reducer'
-let randomQuestions5 = questionsForArt;
-let answers = artanswer;
+let randomQuestions5 = questionsForProgramming;
+let answers = programmingAnswer;
 
 /* fetch question hook to fetch api data and set value to store */
 export const useFetchQuestion = ()=>{

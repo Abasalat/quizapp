@@ -10,22 +10,22 @@ function shuffleArray(array) {
 const scienceQuestions = shuffleArray([
   {
     id: 1,
-    question: "What is the chemical symbol for water?",
+    question: "What is the chemical symbol for gold?",
     options: [
-      'H2O',
-      'CO2',
-      'O2',
-      'N2'
+      'Au*',
+      'Ag',
+      'Fe',
+      'Cu'
     ]
   },
   {
     id: 2,
-    question: "Who is known as the 'Father of Modern Physics'?",
+    question: "Which gas is most abundant in Earth's atmosphere?",
     options: [
-      'Isaac Newton',
-      'Galileo Galilei',
-      'Albert Einstein',
-      'Niels Bohr'
+      'Oxygen',
+      'Nitrogen*',
+      'Carbon dioxide',
+      'Argon'
     ]
   },
   {
@@ -33,231 +33,96 @@ const scienceQuestions = shuffleArray([
     question: "What is the powerhouse of the cell?",
     options: [
       'Nucleus',
-      'Mitochondria',
-      'Endoplasmic Reticulum',
-      'Golgi Apparatus'
+      'Mitochondria*',
+      'Endoplasmic reticulum',
+      'Golgi apparatus'
     ]
   },
   {
     id: 4,
-    question: "Which gas is responsible for the greenhouse effect on Earth?",
+    question: "Who developed the theory of relativity?",
     options: [
-      'Oxygen',
-      'Carbon Dioxide',
-      'Nitrogen',
-      'Methane'
+      'Isaac Newton',
+      'Galileo Galilei',
+      'Albert Einstein*',
+      'Niels Bohr'
     ]
   },
   {
     id: 5,
-    question: "What is the largest planet in our solar system?",
+    question: "What is the chemical formula for water?",
     options: [
-      'Earth',
-      'Jupiter',
-      'Saturn',
-      'Mars'
+      'H2O*',
+      'CO2',
+      'O2',
+      'CH4'
     ]
   },
   {
     id: 6,
-    question: "Who developed the theory of relativity?",
+    question: "Which planet is known as the Red Planet?",
     options: [
-      'Isaac Newton',
-      'Albert Einstein',
-      'Galileo Galilei',
-      'Stephen Hawking'
+      'Venus',
+      'Mars*',
+      'Jupiter',
+      'Saturn'
     ]
   },
   {
     id: 7,
-    question: "What is the chemical symbol for gold?",
+    question: "What is the smallest unit of matter?",
     options: [
-      'Au',
-      'Ag',
-      'Fe',
-      'Cu'
+      'Atom*',
+      'Molecule',
+      'Cell',
+      'Proton'
     ]
   },
   {
     id: 8,
-    question: "Which element has the atomic number 1?",
+    question: "Which element has the chemical symbol 'C'?",
     options: [
-      'Hydrogen',
-      'Oxygen',
-      'Helium',
-      'Carbon'
+      'Calcium',
+      'Carbon*',
+      'Copper',
+      'Chlorine'
     ]
   },
   {
     id: 9,
-    question: "What is the process by which plants make their own food?",
+    question: "Who is known as the father of modern physics?",
     options: [
-      'Photosynthesis',
-      'Respiration',
-      'Fermentation',
-      'Transpiration'
+      'Isaac Newton',
+      'Niels Bohr',
+      'Galileo Galilei',
+      'Albert Einstein*'
     ]
   },
   {
     id: 10,
-    question: "Who discovered penicillin?",
-    options: [
-      'Marie Curie',
-      'Alexander Fleming',
-      'Louis Pasteur',
-      'Robert Koch'
-    ]
-  },
-  {
-    id: 11,
-    question: "What is the smallest unit of matter?",
-    options: [
-      'Molecule',
-      'Atom',
-      'Cell',
-      'Particle'
-    ]
-  },
-  {
-    id: 12,
-    question: "What is the chemical formula for methane?",
-    options: [
-      'CH4',
-      'CO2',
-      'H2O',
-      'O2'
-    ]
-  },
-  {
-    id: 13,
-    question: "Who proposed the theory of evolution by natural selection?",
-    options: [
-      'Charles Darwin',
-      'Gregor Mendel',
-      'Alfred Russel Wallace',
-      'Jean-Baptiste Lamarck'
-    ]
-  },
-  {
-    id: 14,
-    question: "What is the SI unit for measuring temperature?",
-    options: [
-      'Celsius',
-      'Kelvin',
-      'Fahrenheit',
-      'Rankine'
-    ]
-  },
-  {
-    id: 15,
-    question: "What is the chemical symbol for iron?",
-    options: [
-      'Fe',
-      'Au',
-      'Ag',
-      'Cu'
-    ]
-  },
-  {
-    id: 16,
-    question: "What is the process of turning a gas into a liquid?",
-    options: [
-      'Condensation',
-      'Evaporation',
-      'Sublimation',
-      'Melting'
-    ]
-  },
-  {
-    id: 17,
-    question: "Who formulated the laws of motion and universal gravitation?",
-    options: [
-      'Isaac Newton',
-      'Galileo Galilei',
-      'Albert Einstein',
-      'Nikola Tesla'
-    ]
-  },
-  {
-    id: 18,
-    question: "Which gas makes up the majority of Earth's atmosphere?",
-    options: [
-      'Oxygen',
-      'Carbon Dioxide',
-      'Nitrogen',
-      'Helium'
-    ]
-  },
-  {
-    id: 19,
-    question: "What is the chemical symbol for sodium?",
-    options: [
-      'Na',
-      'K',
-      'Ca',
-      'Mg'
-    ]
-  },
-  {
-    id: 20,
-    question: "Who discovered radium and polonium?",
-    options: [
-      'Marie Curie',
-      'Albert Einstein',
-      'Niels Bohr',
-      'Max Planck'
-    ]
-  },
-  {
-    id: 21,
     question: "What is the speed of light in a vacuum?",
     options: [
-      '299,792 kilometers per second',
+      '299,792 kilometers per second*',
       '150,000 kilometers per second',
-      '450,000 kilometers per second',
-      '600,000 kilometers per second'
-    ]
-  },
-  {
-    id: 22,
-    question: "Which planet is known as the 'Red Planet'?",
-    options: [
-      'Venus',
-      'Mars',
-      'Jupiter',
-      'Mercury'
-    ]
-  },
-  {
-    id: 23,
-    question: "Who is considered the 'Father of Chemistry'?",
-    options: [
-      'Robert Boyle',
-      'Antoine Lavoisier',
-      'John Dalton',
-      'Dmitri Mendeleev'
-    ]
-  },
-  {
-    id: 24,
-    question: "What is the chemical symbol for oxygen?",
-    options: [
-      'O2',
-      'O3',
-      'CO2',
-      'H2O'
-    ]
-  },
-  {
-    id: 25,
-    question: "What is the largest organ in the human body?",
-    options: [
-      'Heart',
-      'Liver',
-      'Brain',
-      'Skin'
+      '500,000 kilometers per second',
+      '1 million kilometers per second'
     ]
   }
 ]);
-const randomQuestions5 = scienceQuestions.slice(0, 5);
-export default randomQuestions5;
+
+const randomQuestions5Science = scienceQuestions.slice(0, 5);
+
+const questionsForScience = randomQuestions5Science.map(question => {
+  const optionsWithoutAsterisk = question.options.map(option => option.replace(/\*$/, ''));
+  return {
+    id: question.id,
+    question: question.question,
+    options: optionsWithoutAsterisk
+  };
+});
+
+const scienceAnswer = randomQuestions5Science.map(question => {
+  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
+});
+
+export { questionsForScience, scienceAnswer };

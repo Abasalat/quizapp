@@ -10,57 +10,119 @@ function shuffleArray(array) {
 const programmingQuestions = shuffleArray([
   {
     id: 1,
-    question: "What is the capital of Python?",
-    options: ['C', 'Java', 'Python', 'C++']
+    question: "What does HTML stand for?",
+    options: [
+      'HyperText Markup Language*',
+      'HyperText Modeling Language',
+      'High-Level Text Language',
+      'HyperLink and Text Markup'
+    ]
   },
   {
     id: 2,
-    question: "Which programming language is known for its use in AI and ML?",
-    options: ['JavaScript', 'Python', 'Ruby', 'Swift']
+    question: "Which programming language is often used for web development?",
+    options: [
+      'Java',
+      'Python',
+      'JavaScript*',
+      'C++'
+    ]
   },
   {
     id: 3,
-    question: "What does HTML stand for?",
-    options: ['HyperText Markup Language', 'High-level Text Modeling Language', 'Hyper Transferable and Multi-purpose Language', 'Home Tool Markup Language']
+    question: "What is the purpose of CSS in web development?",
+    options: [
+      'Client-Side Scripting',
+      'Database Management',
+      'Server-Side Scripting',
+      'Styling and Layout*'
+    ]
   },
   {
     id: 4,
-    question: "Which is a dynamically typed language?",
-    options: ['Java', 'C#', 'Python', 'C++']
+    question: "Which of the following is a version control system?",
+    options: [
+      'Git*',
+      'Java',
+      'Python',
+      'HTML'
+    ]
   },
   {
     id: 5,
-    question: "What is the purpose of 'git clone' in Git?",
-    options: ['Create a new Git repository', 'Copy an existing repository', 'Switch between branches', 'Delete a repository']
+    question: "What is the output of the following JavaScript code: `console.log(2 + '2');`?",
+    options: [
+      '4',
+      '22*',
+      'Error',
+      'NaN'
+    ]
   },
   {
     id: 6,
-    question: "In JavaScript, what is a closure?",
-    options: ['Declare variables', 'Define functions', 'Function and lexical environment combo', 'Type of loop']
+    question: "In Python, how do you define a function?",
+    options: [
+      'func',
+      'def*',
+      'function',
+      'define'
+    ]
   },
   {
     id: 7,
-    question: "Output of `print(2 + '2')` in Python:",
-    options: ['4', '22', 'Error', 'None of the above']
+    question: "What does the acronym API stand for?",
+    options: [
+      'Application Programming Interface*',
+      'Advanced Programming Interface',
+      'Automated Processing Interface',
+      'Application Process Integration'
+    ]
   },
   {
     id: 8,
-    question: "Which data structure follows LIFO?",
-    options: ['Queue', 'Stack', 'Linked List', 'Array']
+    question: "Which programming language is known for its use in data science and machine learning?",
+    options: [
+      'Java',
+      'JavaScript',
+      'Python*',
+      'C#'
+    ]
   },
   {
     id: 9,
-    question: "Purpose of 'npm' command in Node.js?",
-    options: ['Install Node.js', 'Manage packages and dependencies', 'Create a new project', 'Run JavaScript files']
+    question: "What is the purpose of SQL?",
+    options: [
+      'Styling and Layout',
+      'Server-Side Scripting',
+      'Structured Query Language*',
+      'Single Question Language'
+    ]
   },
   {
     id: 10,
-    question: "Open a file in binary mode in Python:",
-    options: ["file('filename', 'rb')", "open('filename', 'r')", "open('filename', 'wb')", "file('filename', 'b')"]
-  },
-  // Add more questions following the same format
-  // ...
+    question: "Which company developed the C programming language?",
+    options: [
+      'Microsoft',
+      'IBM',
+      'Bell Labs*',
+      'Oracle'
+    ]
+  }
 ]);
 
-const randomQuestions5 = programmingQuestions.slice(0, 5);
-export default randomQuestions5;
+const randomQuestions5Programming = programmingQuestions.slice(0, 5);
+
+const questionsForProgramming = randomQuestions5Programming.map(question => {
+  const optionsWithoutAsterisk = question.options.map(option => option.replace(/\*$/, ''));
+  return {
+    id: question.id,
+    question: question.question,
+    options: optionsWithoutAsterisk
+  };
+});
+
+const programmingAnswer = randomQuestions5Programming.map(question => {
+  return question.options.indexOf(question.options.find(option => option.endsWith('*')));
+});
+
+export { questionsForProgramming, programmingAnswer };
