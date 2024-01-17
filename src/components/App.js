@@ -12,7 +12,7 @@ import Data from "../database/Data";
 import LandingPage from "./LandingPage";
 import LoginForm from "../components/LoginForm";
 import Signup from "../components/Signup";
-
+import { CheckUserExist } from "../helper/helper";
 //**react routes */
 
 const router = createBrowserRouter([
@@ -34,23 +34,23 @@ const router = createBrowserRouter([
   },
   {
     path: "/quiz",
-    element: <Quiz></Quiz>,
+    element: <CheckUserExist><Quiz/></CheckUserExist>
   },
   {
     path: "/quiz2",
-    element: <Quiz2></Quiz2>,
+    element: <CheckUserExist><Quiz2/></CheckUserExist>
   },
   {
     path: "/quiz3",
-    element: <Quiz3></Quiz3>,
+    element: <CheckUserExist><Quiz3/></CheckUserExist>
   },
   {
     path: "/quiz4",
-    element: <Quiz4></Quiz4>,
+    element: <CheckUserExist><Quiz4/></CheckUserExist>
   },
   {
     path: "/result",
-    element: <Result></Result>,
+    element: <CheckUserExist><Result/></CheckUserExist>
   },
 ]);
 

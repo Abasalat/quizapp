@@ -1,3 +1,7 @@
+import { Children } from "react";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
+
 export function attempts_Number(result){
     return result.filter(r => r !== undefined).length;
 }
@@ -8,4 +12,8 @@ export function earnPoints_Number(result, answers, point){
 //**Marks less than 50% you are fail */
 export function flagResult(totalPoints, earnPoints){
     return (totalPoints * 50 /100) < earnPoints
+}
+export function CheckUserExist(){
+    const auth = useSelector(state => state.result.userId)
+    return auth ? Children : <Navigate to={'/main'} replace={true}></Navigate>
 }
