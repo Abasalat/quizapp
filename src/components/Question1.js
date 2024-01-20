@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useFetchQuestion } from "../hooks/FetchQuestions";
+import { useFetchQuestion } from "../hooks/FetchQuestions.js";
 import { updateResultAction } from "../redux/result_reducer";
 
 const Question1 = ({ onChecked }) => {
   const { trace } = useSelector((state) => state.questions);
   const result = useSelector((state) => state.result.result);
   const [{ isLoading, serverError }] = useFetchQuestion();
-  useSelector(state => console.log(state))
-  const questions = useSelector((state) => state.questions.queue[state.questions.trace]);
+  useSelector((state) => console.log(state));
+  const questions = useSelector(
+    (state) => state.questions.queue[state.questions.trace]
+  );
   const dispatch = useDispatch();
 
-  const initialChecked = result[trace] !== undefined ? result[trace] : undefined;
+  const initialChecked =
+    result[trace] !== undefined ? result[trace] : undefined;
   const [checked, setChecked] = useState(initialChecked);
-  const [hasSelection, setHasSelection] = useState(initialChecked !== undefined);
+  const [hasSelection, setHasSelection] = useState(
+    initialChecked !== undefined
+  );
 
   useEffect(() => {
     setChecked(result[trace]);
@@ -37,10 +42,11 @@ const Question1 = ({ onChecked }) => {
   }
 
   if (isLoading) return <h3 className="text-light">isLoading</h3>;
-  if (serverError) return <h3 className="text-light">{serverError || "Unknown Error"}</h3>;
+  if (serverError)
+    return <h3 className="text-light">{serverError || "Unknown Error"}</h3>;
 
   return (
-    <div className="questions">
+    <div className="questions ">
       <h2 className="text-light">{questions?.question}</h2>
       <ul key={questions?.id}>
         {questions?.options.map((option, index) => (
@@ -57,7 +63,9 @@ const Question1 = ({ onChecked }) => {
             <label className="text-primary" htmlFor={`q1-option-${index}`}>
               {option}
             </label>
-            <div className={`check ${checked === index ? "checked" : ""}`}></div>
+            <div
+              className={`check ${checked === index ? "checked" : ""}`}
+            ></div>
           </li>
         ))}
       </ul>

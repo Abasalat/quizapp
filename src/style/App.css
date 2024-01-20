@@ -42,7 +42,7 @@ body {
   margin: 40px auto;
   height: auto;
   width: 800px;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .container-main .title {
@@ -51,6 +51,17 @@ body {
   border: 5px solid var(--primary-color);
   padding: 0.3em 0.2em;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 786px) {
+  .container-main .text-light{
+    width: 100%;
+    font-size: 15px;
+  }
+  .container-main{
+    width: 95%;
+  }
+  
 }
 
 .text-light {

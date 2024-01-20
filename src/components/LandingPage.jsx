@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Col, Image, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import vector from "../assets/img/vector-2.svg";
@@ -22,10 +22,13 @@ const LandingPage = () => {
             </Link>
 
             <p className="mt-5 ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae ullam vero deleniti molestiae! Dicta quo ab culpa
-              ullam nemo non vitae facilis delectus eos, cum accusantium
-              adipisci perspiciatis quos.
+              Welcome to Quiz App, where you are about to embark on your
+              ultimate Quiz Experience. Get ready to test your knowledge,
+              challenge your intellect, and have a thrilling time answering a
+              diverse range of questions. Whether you're a trivia enthusiast or
+              a casual player, our Quiz App is designed to provide you with an
+              engaging and enjoyable experience. Dive into the world of quizzes
+              and let the excitement begin!
             </p>
 
             <Link to={"/login"}>

@@ -16,6 +16,7 @@
     border-radius: 20px;
 }
 
+
 .b1{
     border-color: rgb(3, 255, 45);
 }
@@ -39,6 +40,12 @@
 }
 .s4 .btn{
     background-color: rgb(0, 255, 242);
+}
+.b5{
+    border-color: rgb(28, 7, 221);
+}
+.s5 .btn{
+    background-color:rgb(28, 7, 221);
 }
 
 .start{

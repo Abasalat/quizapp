@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../style/Result.css";
 import { Link } from "react-router-dom";
-import ResultTable from "./ResultTable";
 import { useDispatch, useSelector } from "react-redux";
 import { resetAllAction } from "../redux/question_reducer"; //**import actions*/
 import { resetResultAction } from "../redux/result_reducer";
@@ -15,17 +14,15 @@ const Result = () => {
   const dispatch = useDispatch();
   const {
     questions: { queue, answers },
-    result: { result, userId },
+    result: { result },
   } = useSelector((state) => state);
-
-  useEffect(() => {
-    console.log(flag);
-  });
 
   const totalPoints = queue.length * 10;
   const attempts = attempts_Number(result);
   const earnPoints = earnPoints_Number(result, answers, 10);
   const flag = flagResult(totalPoints, earnPoints);
+
+  //** store user result */
 
   function onRestart() {
     //console.log('on Restart')
@@ -36,13 +33,6 @@ const Result = () => {
     <div className="container-main text-white">
       <h1 className="title text-light">Quiz Application</h1>
       <div className="result flex-center">
-        <div
-          className="flex "
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <span>Username: </span>
-          <span className="bold"> Daily tution</span>
-        </div>
         <div
           className="flex"
           style={{ display: "flex", justifyContent: "space-between" }}
@@ -93,7 +83,26 @@ const Result = () => {
 
       <div className="container-main">
         {/*This is the result table*/}
-        <ResultTable />
+        <div>
+          <table style={{ color: "black" }}>
+            <thead className="table-header">
+              <tr className="table-row">
+                <td>Name</td>
+                <td>Attemps</td>
+                <td>Earn Points</td>
+                <td>Result</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="table-body">
+                <td>Salat</td>
+                <td>{attempts || 0}</td>
+                <td>{totalPoints || 0}</td>
+                <td>{earnPoints || 0}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

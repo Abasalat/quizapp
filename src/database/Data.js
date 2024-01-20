@@ -183,5 +183,4 @@ const answer = randomQuestions5.map((question) => {
     question.options.find((option) => option.endsWith("*"))
   );
 });
-export { questionsForUI };
-export default answer;
+export { questionsForUI, answer };
